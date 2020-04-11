@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="{% url 'Add_Players' %}">Add More</a>
+    <a href="{% url 'Delete_Player' pk=Team_details.id %}">Delete Player</a>
+    <h1>Team Players</h1>
+    {% for ret in Team_details.player.all %}
+    <h2>NAME : {{ ret.name }}</h2>
+    <h3>SKILL : {{ ret.skill }} Runs : {{ ret.runs }}Wickets:{{ ret.wickets }}</h3>
+    <a href="{% url 'Update' pk=ret.id %}">Edit</a>
+      {% endfor %}
+  </body>
+</html>

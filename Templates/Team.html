@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="{% url 'Add_Team' %}">Add More</a>
+    <a href="{% url 'Delete_Teams' pk=Tournment_details.id %}">Delete Team</a>
+    <h1>List Of Teams In Given Tournment</h1>
+    {% for ret in Tournment_details.teams.all %}
+      <h1><a href="{% url 'Players' pk=ret.id %} ">{{ ret.name }}</a></h1>
+      {% endfor %}
+  </body>
+</html>

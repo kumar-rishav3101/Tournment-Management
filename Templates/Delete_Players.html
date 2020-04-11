@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for ret in Team_details.player.all %}
+    <h2><a href="{% url 'Delete_P' pk=ret.id %} ">NAME : {{ ret.name }}</a></h2>
+      {% endfor %}
+  </body>
+</html>

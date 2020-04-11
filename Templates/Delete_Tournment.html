@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for ret in data %}
+  <h1><a href="  {% url 'Delete_T' pk=ret.id %}  ">{{ ret.name }}</a></h1>
+    {% endfor %}
+  </body>
+</html>
